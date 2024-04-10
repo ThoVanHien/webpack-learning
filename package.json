@@ -1,0 +1,21 @@
+{
+  "name": "webpack-learning",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.1",
+    "csv-loader": "^3.0.5",
+    "html-webpack-plugin": "^5.6.0",
+    "lodash": "^4.17.21",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "xml-loader": "^1.2.1"
+  }
+}
