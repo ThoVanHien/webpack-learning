@@ -62,4 +62,15 @@
       - devServer.static: './dist', // thêm optimization.runtimeChunk: 'single' nếu nhiều hơn 1 entrypoint. Thêm shortcut này vào package.json : "start": "webpack serve --open",
 
    - TYPESCRIPT: https://webpack.js.org/guides/typescript/
+   - VẤN ĐỀ VỀ CATCHING: 
+      - Khi ở phía server không có gì thay đổi về CSS và JS thì phía client sẽ lưu lại trên cache trình duyệt (cache tĩnh)
+      - Cache động thì cần phải cập nhật trước khi truy xuất => lâu hơn cache tĩnh. Nên dùng cho lưu kết quả tìm kiếm google, dữ liệu ứng dụng
+      - Khi dùng output với hash thì mỗi lần build(dù không thay đổi) sẽ tạo ra một file mới. Dùng optim
+   
+   - TRUYỀN BIẾN QUA NPX VÀ NPM: tham khảo https://webpack.js.org/api/cli/#commands
+      - Khi webpack config sử dụng exports bằng function thì "environment" sẽ được truyền như sau:
+         - npx webpack --env prod (args sẽ nhận được {prod: true})
+         - npx webpack --node-env production   # process.env.NODE_ENV = 'production'
+         - module.exports(env, args) #log ra để xem thử
+
 
